@@ -14,7 +14,13 @@
             <input type="number" id="contractTotal" name="contractTotal" required>
             
             <label for="contractTerm">Contract Term (months):</label>
-            <input type="number" id="contractTerm" name="contractTerm" required>
+            <select id="contractTerm" name="contractTerm" required>
+                <option value="month">month</option>
+                <option value="1 year">1 Year</option>
+                <option value="2 year">2 Year</option>
+                <option value="3 year">3 Year</option>
+                <option value="other">Other</option>
+            </select>
             
             <label for="startDate">Start Date:</label>
             <input type="date" id="startDate" name="startDate" required>
@@ -27,9 +33,10 @@
             
             <label for="paymentFrequency">Payment Frequency:</label>
             <select id="paymentFrequency" name="paymentFrequency" required>
-                <option value="monthly">Monthly</option>
-                <option value="quarterly">Quarterly</option>
-                <option value="annually">Annually</option>
+                <option value="oneTime">One time</option>
+                <option value="month">Month</option>
+                <option value="year">Year</option>
+                <option value="other">Other</option>
             </select>
             
             <button type="button" onclick="calculateContract()">Calculate</button>
